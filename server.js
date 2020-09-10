@@ -7,10 +7,11 @@ const mockUserData=[
 ]
 
 app.get('/users',function(req,res){
+	console.log(req.params.ig)
 	res.json({
 		success: true,
-		message: 'successfully got users. Nice!',
-		users: mockUserData
+		message: 'go one user',
+		users: req.params.id
 	})
 })
 
